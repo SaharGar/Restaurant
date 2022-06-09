@@ -1,0 +1,32 @@
+
+.delivery {
+  @include main-component-design;
+
+  .delivery-slot-container {
+    padding: 35px 10px;
+
+    .delivery-slot {
+      width: 130px;
+      height: 250px;
+      border: 1px solid black;
+      border-radius: 5px;
+
+      h3 {
+        @include top-left-right-border-radius;
+        background-color: $primary-white;
+        border-bottom: 1px solid black;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      .delivery-info {
+        font-size: 15px;
+        background-color: $primary-color;
+        flex-basis: 83%;
+        gap: 10px;
+        justify-content: space-evenly;
+        text-align: center;
+      }
+    }
+  }
+}

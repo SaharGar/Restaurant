@@ -1,0 +1,54 @@
+
+.landing-page {
+  gap: 20px;
+
+  .landing-page-btn {
+    width: fit-content;
+    padding: 5px 8px;
+    border: unset;
+    border-radius: 5px;
+    background-color: $secondary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $primary-white;
+      transform: scale(1.1);
+    }
+  }
+
+    .name-picking-form {
+      gap: 10px;
+    }
+
+    .people {
+      gap: 20px;
+
+      .buttons {
+        width: fit-content;
+        margin: auto;
+        gap: 10px;
+      }
+
+      .page-buttons {
+        gap: 5px;
+      }
+    }
+
+    .people-list {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, 200px);
+
+      @media screen and (min-width: 850px) {
+        grid-template-columns: repeat(3, 250px);
+      }
+
+      @media screen and (min-width: 1110px) {
+        grid-template-columns: repeat(4, 250px);
+      }
+
+      @media screen and (min-width: 1350px) {
+        grid-template-columns: repeat(5, 250px);
+      }
+    }
+}

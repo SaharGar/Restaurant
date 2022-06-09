@@ -1,0 +1,81 @@
+.app-header {
+  background-color: $primary-color;
+  padding: 0px 10px;
+  margin-bottom: 20px;
+
+  .nav-link {
+    &:hover {
+      color: $primary-white;
+    }
+
+    &.active {
+      border-bottom: 1px solid $secondary-color;
+    }
+  }
+
+  .app-headline {
+    text-transform: capitalize;
+    font-size: 24px;
+
+    @media  screen and (min-width: 700px) {
+      font-size: 32px;
+    }
+  }
+
+  .total-income {
+    font-size: 14px;
+
+    @media  screen and (min-width: 700px) {
+      font-size: 18px;
+    }
+  }
+
+  .nav-links {
+    display: none;
+    gap: 20px;
+
+    @media  screen and (min-width: 700px) {
+      display: flex;
+    }
+  }
+
+  .menu-icon {
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+
+    @media  screen and (min-width: 700px) {
+      display: none;
+    }
+  }
+
+  .mobile-menu-modal-container {
+    position: fixed;
+    background-color: $modal-menu-bcg;
+    width: 100vw;
+    height: 100vh;
+    left: 0%;
+    top: 0%;
+    z-index: 10;
+  }
+
+  .mobile-menu-nav-links-container {
+    position: fixed;
+    width: 200px;
+    height: 500px;
+    right: -100%;
+    top: 0%;
+    background-color: $secondary-color;
+    z-index: 100;
+    transition: all .3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    gap: 10px;
+
+    &.open {
+      right: 0%;
+    }
+  }
+}

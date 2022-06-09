@@ -1,0 +1,68 @@
+.production {
+  @include main-component-design;
+  gap: 15px;
+
+  &-container {
+    gap: 15px;
+
+    .production-slot {
+      width: 85%;
+      height: 160px;
+      margin: auto;
+      background-color: $primary-color;
+      border: 1px solid black;
+      border-radius: 10px;
+      font-size: 14px;
+
+      @media screen and (min-width: 1200px) {
+        font-size: 15px;
+      }
+
+      .slot-item {
+        padding: 10px;
+      }
+
+      &>*:not(:last-child) {
+        border-right: 1px solid black;
+      }
+
+      .production-img {
+        flex-basis: 25%;
+        .img-container {
+          width: 80%;
+          text-align: center;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+      }
+
+      .production-info {
+        gap: 5px;
+        text-align: center;
+        flex-basis: 25%;
+      }
+
+      .production-status {
+        flex-basis: 50%;
+        text-align: center;
+        ul {
+          width: 75%;
+          max-height: 110px;
+          overflow-y: scroll;
+          margin: 5px auto 0px;
+          gap: 5px;
+          border: 1px solid black;
+
+          li {
+            text-transform: capitalize;
+
+            &.ready {
+              background-color: $primary-green-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: ($height / $width) * 100%;
+    }
+    > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  
+    > img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+@mixin main-component-design {
+  background-color: $secondary-color;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+@mixin top-left-right-border-radius {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}

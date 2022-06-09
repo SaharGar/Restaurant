@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: rem(16px);
+}
+
+img {
+    width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.section-headline {
+    @include top-left-right-border-radius;
+    background-color: $primary-color;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid black;
+    color: $primary-white;
+    padding: 5px 0;
+}
+
+.timer-btns {
+    width: fit-content;
+    margin: auto;
+}
