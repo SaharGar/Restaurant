@@ -4,7 +4,7 @@ import './assets/style/style.scss';
 import {Provider} from 'react-redux';
 import store from './store';
 import {QueryClientProvider, QueryClient} from "react-query";
-import {BrowserRouter as Router} from "react-router-dom";
+import {HashRouter as Router} from "react-router-dom";
 import {RootCmp} from "./RootCmp";
 
 const reactQueryClient = new QueryClient()
